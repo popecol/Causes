@@ -77,12 +77,16 @@ names(s0) <- names(s5) <- lab
 names(m0) <- names(m5) <- species
 rm(s0,s5)
 
+save(m0, file = "data/model0.RData")
+save(m5, file = "data/model5.RData")
+
 # Drawing plots (Figure S4 and S5 Supplementary Material ) -----------------------------
 
-op <- par(mfrow = c(1, 3), mar = c(5, 1, 1, 1), oma = c(0, 10, 0, 0))
-
+load("data/model0.RData")
+load("data/model5.RData")
 
 # No selection 
+op <- par(mfrow = c(1, 3), mar = c(5, 1, 1, 1), oma = c(0, 10, 0, 0))
 plt_multi(m0, "ba", dy = 0.12, bw = 5, yaxis = T)
 plt_multi(m0, "tpr", dy = 0.12, bw = 5)
 plt_multi(m0, "tnr", dy = 0.12, bw = 5)
