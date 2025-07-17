@@ -131,9 +131,9 @@ emmip(m_tnr, ~ mod | sel, type = "response", CIs = TRUE)
 # Graph (Figure 2, main article)  ------------------------------------------------------------
 
 op <- par(mfrow = c(1, 3), mar = c(6.5, 5, 2, 2))
-plot_meta(m_acc, ran = TRUE, ylab = "Accuracy")
-plot_meta(m_tpr, ran = TRUE, ylab = "True positive rate")
-plot_meta(m_tnr, ran = TRUE, ylab = "True negative rate")
+plot_meta(m_acc, ran = F, ylab = "Accuracy")
+plot_meta(m_tpr, ran = F, ylab = "True positive rate")
+plot_meta(m_tnr, ran = F, ylab = "True negative rate")
 par(op)
 
 
